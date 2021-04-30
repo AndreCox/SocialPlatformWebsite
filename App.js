@@ -97,6 +97,7 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   inputText: {
+    outline: 'none',
     height: 50,
     color: "#20162D",
   },
