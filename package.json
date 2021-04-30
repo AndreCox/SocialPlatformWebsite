@@ -1,14 +1,16 @@
 {
   "name": "rnwboilerplate",
   "version": "0.0.1",
+  "homepage": "https://andrecox.github.io/SocialPlatformWebsite/",
   "author": "Pranit Harekar <pranitharekar@hotmail.com>",
   "private": true,
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "start": "./node_modules/.bin/webpack-dev-server -d --config ./web/webpack.config.js --inline --hot --colors",
     "test": "jest",
-    "ios": "react-native run-ios",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build:web": "./node_modules/.bin/webpack-dev-server -d --config ./web/webpack.config.js --inline --hot --colors",
-    "build:web-production": "./node_modules/.bin/webpack -p --config ./web/webpack.config.js"
+    "build": "./node_modules/.bin/webpack -p --config ./web/webpack.config.js"
   },
   "dependencies": {
     "gh-pages": "^3.1.0",

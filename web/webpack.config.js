@@ -51,7 +51,7 @@ module.exports = {
 
   // configures where the build ends up
   output: {
-    filename: "bundle.js",
+    filename: "../build/bundle.js",
     path: path.resolve(appDirectory, "web")
   },
 
