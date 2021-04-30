@@ -8,7 +8,9 @@
  */
 
 import React, { Component } from "react";
-import { Platform, StyleSheet, Text, View } from "react-native";
+import { color, spacing } from "../Website/theme";
+import { Platform, StyleSheet, Text, View, TextInput } from "react-native";
+
 
 const instructions = Platform.select({
   ios: "Press Cmd+R to reload,\n" + "Cmd+D or shake for dev menu",
@@ -25,6 +27,7 @@ export default class App extends Component {
         <Text style={styles.welcome}>This is the website for Comet Social!</Text>
         <Text style={styles.instructions}>More stuff will be added later</Text>
         <Text style={styles.instructions}>{instructions}</Text>
+        <TextInput style={styles.inputView}></TextInput>
       </View>
     );
   }
@@ -33,18 +36,66 @@ export default class App extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
+    backgroundColor: "#E7F2F8",
     alignItems: "center",
-    backgroundColor: "#F5FCFF"
+    justifyContent: "center",
   },
   welcome: {
-    fontSize: 20,
-    textAlign: "center",
-    margin: 10
-  },
+      fontSize: 20,
+      textAlign: "center",
+      margin: 10
+    },
   instructions: {
-    textAlign: "center",
-    color: "#333333",
-    marginBottom: 5
-  }
-});
+      textAlign: "center",
+      color: "#333333",
+      marginBottom: 5
+    },
+  logo: {
+    alignSelf: "center",
+    maxWidth: "100%",
+    maxHeight: "100%",
+    marginVertical: spacing[8],
+    width: 700 / 5,
+    height: 938 / 5,
+    resizeMode: "stretch",
+  },
+  inputView: {
+    width: "80%",
+    backgroundColor: "#74BDCB",
+    borderRadius: 25,
+    height: 50,
+    marginBottom: 10,
+    justifyContent: "center",
+    padding: 20,
+  },
+  inputText: {
+    height: 50,
+    color: "#20162D",
+  },
+  forgot: {
+    color: "black",
+    fontSize: 11,
+    marginTop: 20,
+  },
+  loginFailText: {
+    alignContent: "center",
+    color: "red",
+    fontSize: 11,
+  },
+  loginBtn: {
+    width: "80%",
+    backgroundColor: "#ed7c4cff",
+    borderRadius: 25,
+    height: 50,
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: 40,
+    marginBottom: 10,
+  },
+  loginText: {
+    color: "white",
+  },
+  signupText: {
+    color: "#20162D",
+  },
+})
