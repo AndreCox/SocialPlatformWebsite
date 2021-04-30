@@ -1,25 +1,25 @@
-# React-Native-Web-Boilerplate
+# This is the source for the website for our app
 
-This is a simple boilerplate for integrating React Native for Web in an existing React Native project. It includes minimal configs & dependencies enough to get you started with React Native for Web.
+This is uses these technologys for quick developement, React Native for Web, Expo, and Webpack. React Native for web allows us to share code from the app to the website. Expo allows for easy development I will elaborate further in this readme. Finaly Webpack converts the javascript and typescript to a single package for deployment.
 
 ## Quick Start
 
-iOS:
-
-- Start metro bundler `$ yarn start`
-- Run iOS app `$ yarn ios`
+- install dependency's `npm install`
 
 Web:
 
-- Start webpack dev server `$ yarn build:web`
-- Access the web app at http://localhost:9000/
-
-<img width="800" alt="screen shot 2019-02-23 at 11 29 01 am" src="https://user-images.githubusercontent.com/17886017/53289016-407e8e00-375e-11e9-9f75-39653af888fb.png">
+- Start the expo dev server `npm start`
+- A webpage should open and from there you have the option to launch the website.
+- Once you select this the real website will open.
+- Any changes you make in the code will be expressed once you save the files.
 
 ## Reference Links
 
 - [React Native](https://facebook.github.io/react-native/docs/getting-started.html)
-- [React Native for Web](https://github.com/necolas/react-native-web)
+- [Expo](https://github.com/expo/expo)
 - [Webpack](https://webpack.js.org/)
 
-Pull request to improve this boilerplate are always welcomed :tada:
+## Important stuff for publishing
+
+- To publish the website you should first check everything works in the dev server.
+- Then run `npm run deploy`
