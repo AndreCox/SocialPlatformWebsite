@@ -1,22 +1,35 @@
 {
-  "name": "react-gh-pages",
-  "version": "0.1.0",
+  "name": "rnwboilerplate",
+  "version": "0.0.1",
+  "author": "Pranit Harekar <pranitharekar@hotmail.com>",
   "private": true,
-  "homepage": "http://AndreCox.github.io/SocialPlatformWebsite",
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "ios": "react-native run-ios",
+    "build:web": "./node_modules/.bin/webpack-dev-server -d --config ./web/webpack.config.js --inline --hot --colors",
+    "build:web-production": "./node_modules/.bin/webpack -p --config ./web/webpack.config.js"
+  },
   "dependencies": {
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react": "16.6.3",
+    "react-dom": "^16.8.1",
+    "react-native": "0.58.4",
+    "react-native-web": "^0.10.0"
   },
   "devDependencies": {
-    "gh-pages": "^1.2.0",
-    "react-scripts": "1.0.7"
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "24.1.0",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-react-native-web": "^0.10.0",
+    "jest": "24.1.0",
+    "metro-react-native-babel-preset": "0.51.1",
+    "react-test-renderer": "16.6.3",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.29.3",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.1.14"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+  "jest": {
+    "preset": "react-native"
   }
 }
