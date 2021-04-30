@@ -22,4 +22,4 @@ Web:
 ## Important stuff for publishing
 
 - To publish the website you should first check everything works in the dev server.
-- Then run 'npm deploy'
+- Then run 'npm run deploy'
