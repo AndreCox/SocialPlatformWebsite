@@ -22,8 +22,8 @@ export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native for Web!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
+        <Text style={styles.welcome}>This is the website for Comet Social!</Text>
+        <Text style={styles.instructions}>More stuff will be added later</Text>
         <Text style={styles.instructions}>{instructions}</Text>
       </View>
     );
