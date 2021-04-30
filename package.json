@@ -1,11 +1,11 @@
 {
-  "name": "rnwboilerplate",
+  "name": "comet-social-website",
   "version": "0.0.1",
   "homepage": "https://andrecox.github.io/SocialPlatformWebsite/",
-  "author": "Pranit Harekar <pranitharekar@hotmail.com>",
+  "author": "Andre Cox",
   "private": true,
   "scripts": {
-    "start": "./node_modules/.bin/webpack-dev-server -d --config ./web/webpack.config.js --inline --hot --colors",
+    "start": "expo start",
     "test": "jest",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",

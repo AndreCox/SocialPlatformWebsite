@@ -9,7 +9,9 @@
 
 import React, { Component } from "react";
 import { color, spacing } from "../Website/theme";
-import { Platform, StyleSheet, Text, View, TextInput } from "react-native";
+import { Platform, StyleSheet, Text, View, TextInput, Image, TouchableOpacity } from "react-native";
+
+const Logo = require("./theme/logo.png")
 
 
 const instructions = Platform.select({
@@ -24,10 +26,36 @@ export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>This is the website for Comet Social!</Text>
-        <Text style={styles.instructions}>More stuff will be added later</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
-        <TextInput style={styles.inputView}></TextInput>
+        <Image source={Logo} style={styles.logo} />
+        <View style={styles.inputView}>
+        <TextInput
+          style={styles.inputText}
+          placeholder="Email..."
+          placeholderTextColor="white"
+          autoCapitalize={"none"}
+        />
+      </View>
+      <View style={styles.inputView}>
+        <TextInput
+          secureTextEntry
+          autoCapitalize={"none"}
+          style={styles.inputText}
+          placeholder="Password..."
+          placeholderTextColor="white"
+        />
+      </View>
+      <Text style={styles.loginFailText}></Text>
+      <TouchableOpacity
+        style={styles.loginBtn}
+      >
+        <Text style={styles.loginText}>LOGIN</Text>
+      </TouchableOpacity>
+      <TouchableOpacity >
+        <Text style={styles.signupText} >Signup</Text>
+      </TouchableOpacity>
+      <TouchableOpacity >
+        <Text style={styles.forgot}>Forgot Password?</Text>
+      </TouchableOpacity>
       </View>
     );
   }
@@ -60,7 +88,7 @@ const styles = StyleSheet.create({
     resizeMode: "stretch",
   },
   inputView: {
-    width: "80%",
+    width: "15%",
     backgroundColor: "#74BDCB",
     borderRadius: 25,
     height: 50,
@@ -83,7 +111,7 @@ const styles = StyleSheet.create({
     fontSize: 11,
   },
   loginBtn: {
-    width: "80%",
+    width: "10%",
     backgroundColor: "#ed7c4cff",
     borderRadius: 25,
     height: 50,
